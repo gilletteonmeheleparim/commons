@@ -6,7 +6,7 @@ const oceanMock = {
         aquarius: {
             queryMetadata: () => {
                 return {
-                    results: [],
+                    results: [] as any,
                     totalResults: 1,
                     totalPages: 1
                 }
@@ -15,7 +15,7 @@ const oceanMock = {
         assets: {
             query: () => {
                 return {
-                    results: [],
+                    results: [] as any,
                     page: 1,
                     /* eslint-disable @typescript-eslint/camelcase */
                     total_pages: 1611,

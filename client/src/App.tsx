@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Header from './components/organisms/Header'
-import Footer from './components/organisms/Footer'
 import Spinner from './components/atoms/Spinner'
 import { User } from './context'
 import Routes from './Routes'
@@ -26,7 +25,7 @@ export default class App extends Component {
                             )}
                         </main>
 
-                        <Footer />
+                        
                     </>
                 </Router>
             </div>

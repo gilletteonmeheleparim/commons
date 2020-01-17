@@ -15,7 +15,8 @@ const AssetModel: MetaData = {
     additionalInformation: {
         description: '',
         copyrightHolder: '',
-        categories: []
+        categories: [],
+        dataLocation: ''
     }
 }
 

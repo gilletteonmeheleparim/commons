@@ -54,6 +54,11 @@ export default function AssetDetails({ metadata, ddo }: AssetDetailsProps) {
             name: 'Price',
             value: `${price} OCEAN`,
             show: price !== '0'
+        },
+        {
+            name: 'Date created',
+            value: main.dateCreated,
+            show: true
         }
     ]
 
@@ -94,6 +99,13 @@ export default function AssetDetails({ metadata, ddo }: AssetDetailsProps) {
             {additionalInformation && additionalInformation.description && (
                 <Markdown
                     text={additionalInformation.description}
+                    className={styles.description}
+                />
+            )}
+
+            {additionalInformation && additionalInformation.dataLocation && (
+                <Markdown
+                    text={"Sample location:" +' '+ additionalInformation.dataLocation}
                     className={styles.description}
                 />
             )}

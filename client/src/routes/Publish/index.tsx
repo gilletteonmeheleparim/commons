@@ -18,6 +18,7 @@ type AssetType = 'dataset' | 'algorithm' | 'container' | 'workflow' | 'other'
 interface PublishState {
     name?: string
     dateCreated?: string
+    dataLocation?: string
     price?: string
     author?: string
     license?: string
@@ -52,6 +53,7 @@ class Publish extends Component<{}, PublishState> {
     public state = {
         name: '',
         dateCreated: new Date().toISOString(),
+        dataLocation: '',
         description: '',
         files: [],
         price: '0',
@@ -72,6 +74,7 @@ class Publish extends Component<{}, PublishState> {
             2: {
                 description: false,
                 categories: false,
+                dataLocation: false,
                 allFieldsValid: false
             },
             3: {
@@ -122,6 +125,7 @@ class Publish extends Component<{}, PublishState> {
         this.setState({
             name: '',
             dateCreated: new Date().toISOString(),
+            dataLocation: '',
             description: '',
             files: [],
             price: '0',
@@ -204,7 +208,7 @@ class Publish extends Component<{}, PublishState> {
         //
         // Step 2
         //
-        if (validationStatus[2].description && validationStatus[2].categories) {
+        if (validationStatus[2].description && validationStatus[2].categories && validationStatus[2].dataLocation) {
             this.setState(prevState => ({
                 validationStatus: {
                     ...prevState.validationStatus,
@@ -299,7 +303,8 @@ class Publish extends Component<{}, PublishState> {
                 {
                     description: this.state.description,
                     copyrightHolder: this.state.copyrightHolder,
-                    categories: [this.state.categories]
+                    categories: [this.state.categories],
+                    dataLocation: this.state.dataLocation
                 }
             )
         }
@@ -340,7 +345,7 @@ class Publish extends Component<{}, PublishState> {
                 {market => (
                     <Route
                         title="Publish"
-                        description={`Publish a new data set into the Ocean Protocol ${market.network} Network.`}
+                        description={`Publish a data set into the database`}
                     >
                         <Content>
                             <Progress

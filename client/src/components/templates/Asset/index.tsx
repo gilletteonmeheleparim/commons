@@ -6,7 +6,6 @@ import { User } from '../../../context'
 import AssetDetails from './AssetDetails'
 import stylesApp from '../../../App.module.scss'
 import Content from '../../atoms/Content'
-import CategoryImage from '../../atoms/CategoryImage'
 import styles from './index.module.scss'
 import withTracker from '../../../hoc/withTracker'
 import Web3message from '../../organisms/Web3message'
@@ -76,16 +75,7 @@ class Asset extends Component<AssetProps, AssetState> {
         ) : (
             <Route
                 title={main.name}
-                image={
-                    additionalInformation &&
-                    additionalInformation.categories && (
-                        <CategoryImage
-                            header
-                            dimmed
-                            category={additionalInformation.categories[0]}
-                        />
-                    )
-                }
+                
             >
                 <Content>
                     <AssetDetails metadata={metadata} ddo={ddo} />

@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import { NavLink } from 'react-router-dom'
-import { ReactComponent as Logo } from '@oceanprotocol/art/logo/logo.svg'
 import AccountStatus from '../molecules/AccountStatus'
 import styles from './Header.module.scss'
 
@@ -24,7 +23,6 @@ export default class Header extends PureComponent {
             <header className={styles.header}>
                 <div className={styles.headerContent}>
                     <NavLink to="/" className={styles.headerLogo}>
-                        <Logo className={styles.headerLogoImage} />
                         <h1 className={styles.headerTitle}>{meta.title}</h1>
                     </NavLink>
 

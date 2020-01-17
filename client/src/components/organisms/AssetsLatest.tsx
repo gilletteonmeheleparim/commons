@@ -28,7 +28,7 @@ export default class AssetsLatest extends PureComponent<{}, AssetsLatestState> {
         const { ocean } = this.context
 
         const searchQuery = {
-            offset: 15,
+            offset: 5,
             page: 1,
             query: {},
             sort: {
@@ -53,7 +53,7 @@ export default class AssetsLatest extends PureComponent<{}, AssetsLatestState> {
 
         return (
             <>
-                <h2 className={styles.title}>Latest published assets</h2>
+                <h2 className={styles.title}>Latest published datasets</h2>
                 <div className={styles.latestAssetsWrap}>
                     {isLoadingLatest ? (
                         <Spinner message="Loading..." />

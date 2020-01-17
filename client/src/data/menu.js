@@ -6,6 +6,14 @@ const menu = [
         link: '/publish'
     },
     {
+        title: 'Explore datasets',
+        link: '/ExploreDatasetsMap'
+    },
+    {
+        title: 'Model',
+        link: '/model'
+    },
+    {
         title: 'History',
         link: '/history'
     },

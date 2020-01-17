@@ -11,9 +11,9 @@ export default function Ipfs({ addFile }: { addFile(url: string): void }) {
     const { hostname, port, protocol } = new URL(ipfsNodeUri)
 
     const ipfsConfig: IpfsConfig = {
-        protocol: protocol.replace(':', ''),
-        host: hostname,
-        port: port || '443'
+        protocol: 'https',
+        host: 'ipfs.oceanprotocol.com',
+        port: '443'
     }
 
     const { ipfs, isIpfsReady, ipfsError, ipfsMessage } = useIpfsApi(ipfsConfig)

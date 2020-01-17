@@ -8,47 +8,18 @@ import stylesVersionNumbers from '../components/molecules/VersionNumbers/index.m
 import withTracker from '../hoc/withTracker'
 
 const About = () => {
-    const market = useContext(Market)
     const user = useContext(User)
 
     return (
         <Route
-            title="About"
-            description={`A marketplace to find and publish open data sets in the Ocean ${market.network} Network.`}
+            title=""
+            description={`A database and data market to build a global model about Earth's ecological state`}
         >
             <Content>
                 <p>
-                    Commons allows you to access thousands of datasets for free
-                    that have been registered on the Ocean Protocol{' '}
-                    <a href="https://docs.oceanprotocol.com/concepts/pacific-network/">
-                        {market.network} Network
-                    </a>{' '}
-                    and it is targeted at enthusiastic data scientists with some
-                    crypto experience. If you are looking for quality data, you
-                    can easily use the Commons to search for and find publicly
-                    available datasets that are free of charge. If you are
-                    interested in sharing your data, you can use the Commons to
-                    publish data into the {market.network} Network.
+                    This is a database for structured data of land ecological characteristics intended for scietists in various ecology disciplines to collaborate and monetize their collected data. This growing data feeds into a machine learning model that learns to predict soil organic carbon content. This model is going to be an important stepping stone to using Earth's measured and approximized carbon stock as money.  
                 </p>
 
-                <ul>
-                    <li>
-                        <a href="https://blog.oceanprotocol.com/the-commons-marketplace-in-pacific-network-4bcf2f595721">
-                            Blog: The Commons Marketplace in Pacific Network →
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://blog.oceanprotocol.com/the-commons-data-marketplace-c57a44288314">
-                            Blog: The Commons Marketplace →
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/oceanprotocol/commons">
-                            Check out <code>oceanprotocol/commons</code> on
-                            GitHub →
-                        </a>
-                    </li>
-                </ul>
             </Content>
 
             <Content>

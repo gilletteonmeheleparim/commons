@@ -78,6 +78,18 @@
           "help": "Select the date the asset was created, or was updated for the last time.",
           "type": "date",
           "required": true
+        },
+        "dataLocation": {
+          "label": "Sample location",
+          "help": "Enter the location of the sample in form: N, L",
+          "type": "text",
+          "required": true
+        },
+        "price": {
+          "label": "Price",
+          "help": "Enter price in OCEAN tokens",
+          "type": "text",
+          "required": true
         }
       }
     },
